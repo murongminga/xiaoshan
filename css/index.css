@@ -292,6 +292,10 @@ a:hover{
 }
 .sec-topAbout-h2>span{
 	font-size: 34px;
+	display: inline-block;
+	transition: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transform: rotateY(90deg) skew(0) scale(1.3, 1.3) translateX(40px);
+	opacity: 0;
 }
 .sec-topAbout-text{
 	letter-spacing: .11em;
@@ -299,6 +303,7 @@ a:hover{
 	margin-bottom: 28px;
 	position: relative;
 	z-index: 1;
+	transition: 0.5s
 }
 
 .sec-topAbout-circle1{
@@ -311,6 +316,7 @@ a:hover{
     border-radius: 50%;
     opacity: 0.5;
     z-index: 0;
+    transition: 0.8s;
 }
 .sec-topAbout-circle2{
 	position: absolute;
@@ -322,6 +328,7 @@ a:hover{
     border-radius: 50%;
     opacity: 0.5;
     z-index: 0;
+    transition: 0.8s;
 }
 .sec-topAbout-circle3{
 	position: absolute;
@@ -333,6 +340,7 @@ a:hover{
     border-radius: 50%;
     opacity: 0.5;
     z-index: 0;
+    transition: 0.8s;
 }
 .sec-topAbout-but{
 	margin-top: 65px;
@@ -375,8 +383,33 @@ a:hover{
 }
 .sec-shopAbout-h2-span{
 	padding: 16px 0px;
-	border-top: 1px solid #000; 
-	border-bottom: 1px solid #000;
+	position: relative;
+}
+.sec-shopAbout-h2-span:after{
+	width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    content: '';
+    background: #000;
+    bottom: 0;
+    transition: 0.5s;
+}
+.sec-shopAbout-h2-span:before{
+	width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    content: '';
+    background: #000;
+    top: 0;
+    transition: 0.5s;
+}
+.sec-shopAbout-h2-spans:after{
+	transform: scale(0);
+}
+.sec-shopAbout-h2-spans:before{
+	transform: scale(0);
 }
 .sec-shopAbout-p1{
 	font-size: 28px;
@@ -384,9 +417,16 @@ a:hover{
 	font-weight: lighter;
 	margin-bottom: 35px;
 }
+.sec-shopAbout-p1>span{
+	display: inline-block;
+	transition: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transform: rotateY(90deg) skew(0) scale(1.3, 1.3) translateX(40px);
+	opacity: 0;
+}
 .sec-shopAbout-p2{
 	line-height: 30px;
 	margin-bottom: 60px;
+	transition: 0.5s;
 }
 .sec-shopAbout-img{
 	height: 450px;
@@ -409,6 +449,12 @@ a:hover{
     font-size: 20px;
     text-align: center;
 }
+.sec-box-h3>p{
+	transition: 0.5s;
+}
+.sec-box-h3>span{
+	transition: 0.5s;
+}
 .sec-box-h3-line{
 	position: absolute;
 	width: 60px;
@@ -416,6 +462,7 @@ a:hover{
 	bottom:  0px;
 	left: 50%;
 	margin-left: -30px;
+	transform: scale(0);
 }
 .sec-box-img{
 	height: 450px;
@@ -993,4 +1040,10 @@ footer{
 .purple1:before{
 	height: 0px;
 	transition: all 0.5s;
+}
+.turab{
+	transform: scale(.5);
+}
+.opacitya{
+	opacity: 0;
 }

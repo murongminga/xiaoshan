@@ -31,7 +31,7 @@ a:hover{
 	display: block;
 	top: 0px;
 	left: 0px;
-	z-index: 99;
+	z-index: 999;
 	overflow: hidden;
 	transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -112,7 +112,7 @@ a:hover{
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	z-index: 99;
+	z-index: 999;
 	background-color: #fff;
 	display: none;
 }
@@ -208,7 +208,7 @@ a:hover{
 	z-index: 2;
 }
 .top{
-	background-image: url('../images/hero.jpg');
+	background-image: url('../images/about/hero.jpg');
 	height: 240px;
     text-align: center;
     display: flex;
@@ -241,31 +241,296 @@ a:hover{
     margin:50px auto 80px auto;
     line-height: 2.2;
 }
-.new-list{
-	margin-top: -5px;
-    width: 900px;
+.aboutmsg{
+	margin-top: 75px;
+    position: relative;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.aboutmsg:before{
+	position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 315px;
+    content: '';
+    display: block;
+    background-image: url('../images/about/message_bg.jpg');
+    background-size: 100% auto;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.aboutmsg-text{
+	padding-top: 80px;
+    width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.aboutmsg-textspan{
+	position: relative;
+    font-size: 3.6rem;
+    display: inline-block;
+    letter-spacing: .1em;
+}
+.aboutmsg-textspan:before,.aboutmsg-textspan:after{
+	width: 30px;
+    height: 1px;
+    background: #000;
+    content: '';
+    top: 50%;
+    margin-top: -1px;
+    position: absolute;
+}
+.aboutmsg-textspan:before{
+	left: -45px;
+}
+.aboutmsg-textspan:after{
+	right: -45px;
+}
+.msgbody{
+	margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    line-height: 2.2;
+}
+.msgtext{
+	width: 64.7058823529%;
+}
+.msgimg-tit{
+	text-align: right;
+    margin-top: 40px;
+}
+.msgimg-tit1{
+	font-size: 1.6rem;
+    display: block;
+}
+.msgimg-tit2{
+	font-size: 3.2rem;
+    display: block;
+}
+.history{
+	margin-top: 100px;
+    background-image: url(../images/about/history_bg.png);
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+}
+.historybody{
+	padding: 120px 0 100px;
+    position: relative;
+    background-image: url(../images/about/history_logo.png);
+    background-repeat: no-repeat;
+    background-position: center 60px;
+    width: 910px;
     margin-left: auto;
     margin-right: auto;
 }
-.new-list1{
-	border-bottom: 1px solid #cecece;
-    padding: 11px 0 13px;
+.historybodytit{
+	margin-bottom: 44px;
+    padding-bottom: 40px;
+    text-align: center;
     position: relative;
 }
-.new-list2{
-	border-top: 1px solid #cecece;
+.historybodytit:before{
+	content: '';
+    width: 60px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: -0px;
+    display: block;
+    background: #000;
 }
-.new-time{
-	font-size: 12px;
-    color: #999;
-    margin-bottom: 7px;
+.historybodytit>span{
+	display: inline-block;
+    font-size: 2.4rem;
+    letter-spacing: .1em;
 }
-.new-body{
-	font-size: 18px;
-	line-height: 1.8;
+.historylist{
+	display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
 }
-.new-list1:hover{
-	background-color: #f6f6f6;
+.historylist:before{
+	content: '';
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    display: block;
+    background: #fff;
+    left: 134px;
+    top: 0;
+    transition: 15s cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+.historyyear{
+	width: 15.3846153846%;
+    position: relative;
+    line-height: 2.2;
+    font-size: 1.8rem;
+    letter-spacing: .15em;
+}
+.historyyear:before{
+	width: 10px;
+    height: 10px;
+    background: #fff;
+    display: block;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 14px;
+    border-radius: 50%;
+}
+.historyyear:nth-child(1):before{
+	width: 0;
+	height: 0;
+}
+.historycontent{
+	width: calc(100% - 140px);
+    padding-left: 70px;
+    margin-bottom: 33px;
+}
+.historycontent-tit{
+	font-size: 1.8rem;
+	line-height: 2.2;
+}
+.historycontent-tbody{
+	font-size: 1.2rem;
+	line-height: 2.2;
+}
+.historyimg{
+	margin-top: 25px;
+}
+.banner{
+	padding: 120px 0;
+    position: relative;
+}
+.bannertext{
+	position: relative;
+    z-index: 100;
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bannertexttit{
+	margin-bottom: 44px;
+    padding-bottom: 40px;
+    text-align: center;
+    position: relative;
+    font-size: 2.4rem;
+}
+.bannertexttit:before{
+	content: '';
+    width: 60px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: -0px;
+    display: block;
+    background: #000;
+}
+.bannertextbody>p{
+	font-size: 1.4rem;
+    line-height: 2.1428571429;
+    margin-bottom: 65px;
+}
+.bannerbut{
+	height: 60px;
+    font-size: 1.8rem;
+    margin-bottom: 60px;
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: .1em;
+    border: 1px solid #000;
+    line-height: 1;
+    position: relative;
+    transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+.bannerbuticon{
+	right: 25px;
+    top: 50%;
+    margin-top: -7.5px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+}
+.bannerbuticon:before,.bannerbuticon:after{
+	background: #fff;
+    display: block;
+    position: absolute;
+    content: '';
+	left: 7px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+}
+.bannerbuticon:after{
+	left: 0;
+    top: 7px;
+    height: 1px;
+    width: 100%;
+}
+.bannerbut:hover .bannerbuticon:before{
+	background: #000;
+}
+.bannerbut:hover .bannerbuticon:after{
+	background: #000;
+}
+.bannerbut:hover{
+	color: #000;
+	background: #fff;
+}
+.bannerlink{
+	text-align: center;
+}
+.bannerimg{
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.bannerimgbody{
+	position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.bannerimgbox{
+	height: 100%;
+	width: 100%;
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1.2s
+}
+.banner1{
+	background-image: url('../images/about/roots_bg01_pc.jpg');
+	opacity: 1;
+}
+.banner2{
+	background-image: url('../images/about/roots_bg02_pc.jpg');
+}
+.banner3{
+	background-image: url('../images/about/roots_bg03_pc.jpg');
+}
+.banner4{
+	background-image: url('../images/about/roots_bg04_pc.jpg');
 }
 .shopbottom{
 	text-align: center;
@@ -338,6 +603,9 @@ footer{
 .footer-p{
 	margin-bottom: 25px;
 }
+.hidbr{
+	display: none;
+}
 @media (max-width:1000px) {
 	.navone-center{
 		width: 50%;
@@ -409,6 +677,97 @@ footer{
 	}
 	.navone{
 		height: 60px !important;
+	}
+	.hidbr{
+		display: block;
+	}
+	.aboutmsg-text{
+		width: 88%;
+	    margin-left: auto;
+	    margin-right: auto;
+	    padding-top: 70px;
+	}
+	.msgbody{
+		margin-top: 40px;
+    	display: block;
+	}
+	.msgimg{
+		width: 100%;
+	    margin-bottom: 30px;
+	    display: flex;
+	    align-items: flex-end;
+	}
+	.msgimg>img{
+		width: 45%;
+	}
+	.msgimg>p{
+		text-align: left;
+	    margin-top: 0;
+	    width: 57.5757575758%;
+	    padding-left: 10%;
+	}
+	.history{
+		margin-top: 50px;
+	}
+	.historybody{
+		padding: 60px 8% 50px;
+   		background-size: 110% auto;
+   		width: 100%;
+	}
+	.historybodytit{
+		margin-bottom: 30px;
+		font-size: 1.8rem;
+		padding-bottom: 22.5px;
+	}
+	.historylist{
+		display: block;
+	}
+	.historylist:before{
+		left: 0;
+		top:15px;
+	}
+	.historyyear{
+		width: 100%;
+   		padding-left: 9.5238095238%;
+	}
+	.historyyear:before{
+		right: auto;
+    	left: -4px;
+	}
+	.historycontent{
+		width: 100%;
+	    padding-left: 9.5238095238%;
+	    margin-bottom: 30px;
+	}
+	.historycontent-tit{
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.historycontent-body{
+		font-size: 12px;
+	}
+	.banner{
+		padding: 60px 0;
+	}
+	.bannertext{
+		width: 84%;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	.bannertexttit{
+		padding-bottom: 22.5px;
+    	margin-bottom: 30px;
+    	font-size: 1.8rem;
+	}
+	.bannertextbody>p{
+		font-size: 1.2rem;
+    	margin-bottom: 32.5px;
+	}
+	.bannerbut{
+		font-size: 1.4rem;
+	    margin-bottom: 30px;
+	    width: 100%;
+	    height: 45px;
 	}
 
 }
