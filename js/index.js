@@ -114,7 +114,24 @@ $(function(){
 				$('.navtwo-logo').hide()
 			}
 		})
-
+		$(window).load(function(){
+			setTimeout(function(){
+				$('.loading').children('img').css('opacity','0')
+			},500)
+			setTimeout(function(){
+				$('.loading-line').css('transform','scale(1)');
+				$('.loading-line').animate({'opacity':'0'})
+				$('.loading-white').addClass('loading-whiteout')
+				$('.loading-purple').addClass('loading-purpleout')
+			},2000)
+			setTimeout(function(){
+				$('html').css('overflow','visible')
+			},2000)
+			setTimeout(function(){
+				$('.loading').remove()
+			},3500)
+			$('html,body').animate({scrollTop:0},500)
+		})
 
 
 

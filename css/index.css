@@ -1,5 +1,9 @@
 html{
 	font-weight: lighter;
+	overflow: hidden;
+}
+body{
+	overflow-x: hidden;
 }
 .container1{
 	padding: 0px 5%;
@@ -21,6 +25,85 @@ a{
 a:hover{
 	text-decoration: none;
 	color: #000;
+}
+.loading{
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+}
+.loading>img{
+	position: absolute;
+	top: 50%;
+	margin-top: -83px;
+	left: 50%;
+	margin-left: -101px;
+	z-index: 9999;
+	transition: 1.8s;
+}
+.loading-white{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 9997;
+}
+.loading-white:after,.loading-white:before{
+	content: "";
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	background: #fff;
+	left: 0;
+	transition:0.9s cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s;
+}
+.loading-white:after{
+	bottom: 0;
+}
+.loading-white:before{
+	top: 0;
+}
+.loading-whiteout:after,.loading-whiteout:before{
+	height: 0px;
+}
+.loading-purple{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 9996;
+}
+.loading-purple:after,.loading-purple:before{
+	content: "";
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	background: #75687f;
+	left: 0;
+	transition:1.9s cubic-bezier(0.165, 0.84, 0.44, 1) 0.55s;
+}
+.loading-purple:after{
+	bottom: 0;
+}
+.loading-purple:before{
+	top: 0;
+}
+.loading-purpleout:after,.loading-purpleout:before{
+	height: 0px;
+}
+.loading-line{
+	display: block;
+	position: absolute;
+	width: 100%;
+	border-top: 1px solid #000;
+	top: 50%;
+	transition: 0.5s;
+	transform-origin: center;
+	transform: scale(0);
+	z-index: 9998;
 }
 .navone{
 	height: 75px;
